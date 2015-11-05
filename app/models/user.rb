@@ -38,7 +38,6 @@ validates :password, presence: true, length: { minimum: 6 }
 		#Forgets a user.
 		def forget
 			update_attribute(:remember_digest, nil)
-
 		end
 
 end
