@@ -1,4 +1,13 @@
 michael:
-  name: Michael Example
-  email: michael@example.com
-  password_digest: <%= User.digest('password') %>
+ name: Michael Example
+ email: michael@example.com
+ password_digest: <%= User.digest('password') %>
+
+archer:
+ name: Sterling Archer
+ email: duchess@example.gov
+ password_digest: <%= User.digest('password') %>
+
+
+#ran into huge issue here with spaces/tabs with yaml.
+#Eventually I needed to change the tabs-to-spaces settings for yaml
