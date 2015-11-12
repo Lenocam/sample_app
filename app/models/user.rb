@@ -30,10 +30,10 @@ validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 			update_attribute(:remember_digest, User.digest(remember_token))
 		end
 
-		#Returns true if the given toek matches the digest
+		#Returns true if the given token matches the digest
 		def authenticated?(attribute, token)
 			digest = send("#{attribute}_digest")
-			return false if remember_digest.nil?
+			return false if digest.nil? #CHECK HERE
 			BCrypt::Password.new(digest).is_password?(token)
 		end
 
