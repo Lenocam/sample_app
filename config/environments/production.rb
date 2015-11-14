@@ -65,7 +65,7 @@ Rails.application.configure do
 		# config.action_mailer.raise_delivery_errors = false
 
 		config.action_mailer.raise_delivery_errors = true
-		config.action_mailer.delivery_method = :stmp
+		config.action_mailer.delivery_method = :smtp
 		#########STOPPED HERE######
 		host = 'http://limitless-beyond-1807.herokuapp.com' #updated with http:// having pushed to Heroku
 		config.action_mailer.default_url_options = { host: host }
