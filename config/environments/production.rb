@@ -66,7 +66,7 @@ Rails.application.configure do
 
 		config.action_mailer.raise_delivery_errors = true
 		config.action_mailer.delivery_method = :smtp
-		host = 'http://limitless-beyond-1807.herokuapp.com'
+		host = 'http://www.limitless-beyond-1807.herokuapp.com'
 		config.action_mailer.default_url_options = { host: host }
 		ActionMailer::Base.smtp_settings = {
 			:address              => 'smtp.sendgrid.net',
