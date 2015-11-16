@@ -66,8 +66,7 @@ Rails.application.configure do
 
 		config.action_mailer.raise_delivery_errors = true
 		config.action_mailer.delivery_method = :smtp
-		#########STOPPED HERE######
-		host = 'http://limitless-beyond-1807.herokuapp.com' #updated with http:// having pushed to Heroku
+		host = 'http://limitless-beyond-1807.herokuapp.com'
 		config.action_mailer.default_url_options = { host: host }
 		ActionMailer::Base.smtp_settings = {
 			:address              => 'smtp.sendgrid.net',
@@ -75,7 +74,7 @@ Rails.application.configure do
 			:authentication       => :plain,
 			:user_name            => ENV['SENDGRID_USERNAME'],
 			:password             => ENV['SENDGRID_PASSWORD'],
-			:domain               => 'heroku.com',
+			:domain               => 'www.heroku.com',
 			:enable_starttls_auto => true
 		}
 
