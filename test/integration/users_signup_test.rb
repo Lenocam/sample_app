@@ -16,7 +16,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 		end
 		assert_template 'new'
 		#The tutorial shows as div#error_explanation, is actually a class.
-		assert_select 'div.error_explanation'
+		assert_select 'div#error_explanation'
 		assert_select 'div.field_with_errors'
 	end
 

@@ -52,7 +52,7 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
 																password_confirmation: "barquux" }
 		#Tutorial has this as 'div#error_explanation', tests fail done that way
 		#Shown as class and not id when you select inspect element
-		assert_select 'div.error_explanation'
+		assert_select 'div#error_explanation'
 
 		#Empty Pasword
 		patch password_reset_path(user.reset_token),
@@ -61,7 +61,7 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
 																password_confirmation: "" }
 		#Tutorial has this as 'div#error_explanation', tests fail done that way
 		#Shown as class and not id when you select inspect element
-		assert_select 'div.error_explanation'
+		assert_select 'div#error_explanation'
 
 		#Valid password & valid confirmation
 		patch password_reset_path(user.reset_token),
